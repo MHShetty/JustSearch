@@ -16,16 +16,7 @@ android {
         resConfigs "en"
     }
     signingConfigs {
-        release {
-            def Properties localProps = new Properties()
-            localProps.load(new FileInputStream(file('../local.properties')))
-            def Properties keyProps = new Properties()
-            keyProps.load(new FileInputStream(file('../keystore.properties')))
-            storeFile file(keyProps["store"])
-            keyAlias keyProps["alias"]
-            storePassword keyProps["storePass"]
-            keyPassword keyProps["pass"]
-        }
+        release
     }
     buildTypes {
         all {
