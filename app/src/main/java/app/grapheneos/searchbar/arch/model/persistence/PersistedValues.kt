@@ -1,4 +1,4 @@
-package co.pxhouse.sas.arch.model.persistence
+package app.grapheneos.searchbar.arch.model.persistence
 
 interface PersistedValues {
     fun setPersistedProviderId(id: Long)

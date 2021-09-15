@@ -1,4 +1,4 @@
-package co.pxhouse.sas.android
+package app.grapheneos.searchbar.android
 
 import android.content.Context
 import android.util.TypedValue

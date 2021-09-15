@@ -1,4 +1,4 @@
-package co.pxhouse.sas.android.activity
+package app.grapheneos.searchbar.android.activity
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator.ofFloat
@@ -25,12 +25,12 @@ import android.widget.LinearLayout
 import android.widget.ListPopupWindow
 import android.widget.Toast.LENGTH_SHORT
 import android.widget.Toast.makeText
-import co.pxhouse.sas.R
-import co.pxhouse.sas.android.SharedPreferencesPersistedValues
-import co.pxhouse.sas.android.Util.dp
-import co.pxhouse.sas.android.adapter.ProviderListAdapter
-import co.pxhouse.sas.arch.model.CustomSearchProvider
-import co.pxhouse.sas.arch.model.generateProviders
+import app.grapheneos.searchbar.R
+import app.grapheneos.searchbar.android.SharedPreferencesPersistedValues
+import app.grapheneos.searchbar.android.Util.dp
+import app.grapheneos.searchbar.android.adapter.ProviderListAdapter
+import app.grapheneos.searchbar.arch.model.CustomSearchProvider
+import app.grapheneos.searchbar.arch.model.generateProviders
 import kotlin.math.min
 
 class AssistActivity : Activity() {

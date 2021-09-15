@@ -1,4 +1,4 @@
-package co.pxhouse.sas.android.adapter
+package app.grapheneos.searchbar.android.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -9,8 +9,8 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
-import co.pxhouse.sas.R
-import co.pxhouse.sas.arch.model.SearchProvider
+import app.grapheneos.searchbar.R
+import app.grapheneos.searchbar.arch.model.SearchProvider
 
 class ProviderListAdapter(private val providers: List<SearchProvider>) : BaseAdapter() {
     override fun getItem(position: Int) = providers[position]

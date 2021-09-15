@@ -11,7 +11,7 @@ android {
         versionName versionCode.toString()
         versionCode 7
 
-        applicationId "co.pxhouse.sas"
+        applicationId "app.grapheneos.searchbar"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         resConfigs "en"
     }

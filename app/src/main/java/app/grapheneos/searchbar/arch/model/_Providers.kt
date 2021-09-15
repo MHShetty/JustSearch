@@ -1,8 +1,8 @@
-package co.pxhouse.sas.arch.model
+package app.grapheneos.searchbar.arch.model
 
 import android.content.Context
-import co.pxhouse.sas.R
-import co.pxhouse.sas.arch.model.persistence.PersistedValues
+import app.grapheneos.searchbar.R
+import app.grapheneos.searchbar.arch.model.persistence.PersistedValues
 
 interface SearchProvider {
     fun iconRes(): Int

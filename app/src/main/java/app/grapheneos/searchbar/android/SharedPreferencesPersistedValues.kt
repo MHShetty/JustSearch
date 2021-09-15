@@ -1,9 +1,9 @@
-package co.pxhouse.sas.android
+package app.grapheneos.searchbar.android
 
 import android.content.Context
 import android.content.SharedPreferences
-import co.pxhouse.sas.R
-import co.pxhouse.sas.arch.model.persistence.PersistedValues
+import app.grapheneos.searchbar.R
+import app.grapheneos.searchbar.arch.model.persistence.PersistedValues
 
 class SharedPreferencesPersistedValues(
     private val context: Context,
