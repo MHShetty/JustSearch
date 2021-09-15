@@ -13,7 +13,8 @@
             android:launchMode="singleInstance"
             android:noHistory="true"
             android:theme="@style/Theme.SAS.Assist"
-            android:windowSoftInputMode="stateVisible|adjustResize">
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.ASSIST" />
                 <category android:name="android.intent.category.DEFAULT" />
