@@ -12,7 +12,7 @@ android {
     defaultConfig {
         minSdkVersion 26
         targetSdkVersion 30
-        versionName versionProps['name']
+        versionName versionCode.toString()
         versionCode versionProps['code'].toInteger()
 
         applicationId "co.pxhouse.sas"
