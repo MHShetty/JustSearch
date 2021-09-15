@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
     def Properties versionProps = new Properties()
     versionProps.load(new FileInputStream(file('version.properties')))
 
