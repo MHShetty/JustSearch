@@ -36,7 +36,8 @@
             android:gravity="center_vertical|start"
             android:hint="@string/search"
             android:imeOptions="actionSearch|flagNoExtractUi"
-            android:inputType="text">
+            android:inputType="text"
+            android:autofillHints="">
 
             <requestFocus />
         </EditText>
