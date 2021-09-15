@@ -21,5 +21,5 @@ class SharedPreferencesPersistedValues(
         .apply()
 
     override fun getCustomProviderUrl(): String =
-        prefs.getString(context.getString(R.string.prefkey_custom_provider_url), "")
+        prefs.getString(context.getString(R.string.prefkey_custom_provider_url), "")!!
 }
