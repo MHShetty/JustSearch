@@ -6,14 +6,11 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
-    def Properties versionProps = new Properties()
-    versionProps.load(new FileInputStream(file('version.properties')))
-
     defaultConfig {
         minSdkVersion 26
         targetSdkVersion 30
         versionName versionCode.toString()
-        versionCode versionProps['code'].toInteger()
+        versionCode 7
 
         applicationId "co.pxhouse.sas"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -34,7 +31,7 @@ android {
     buildTypes {
         all {
             resValue "string", "app_version", defaultConfig.versionName
-            resValue "string", "app_name", versionProps['appname']
+            resValue "string", "app_name", "Just Search"
         }
         release {
             minifyEnabled true
