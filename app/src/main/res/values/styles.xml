@@ -4,4 +4,10 @@
     <style name="Animation.Assist" parent="@android:style/Animation.InputMethod">
         <item name="android:windowExitAnimation">@anim/exit_assist</item>
     </style>
+
+    <style name="ShapeAppearance.Image.PILL" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
 </resources>
