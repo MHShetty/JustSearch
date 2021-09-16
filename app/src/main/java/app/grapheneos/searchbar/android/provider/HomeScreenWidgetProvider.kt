@@ -25,6 +25,9 @@ class HomeScreenWidgetProvider : AppWidgetProvider() {
         val appWidgetLayout = RemoteViews(context.packageName, R.layout.activity_assist_preview)
 
         appWidgetLayout.setImageViewResource(R.id.providerButton, findSelectedProvider().iconRes())
+        appWidgetLayout.setTextViewText(
+            R.id.searchHint, "${findSelectedProvider().name()} Search"
+        )
 
         val intent = Intent(context, AssistActivity::class.java)
         val pendingIntent = PendingIntent.getActivity(context,0, intent, 0)
