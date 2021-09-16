@@ -1,7 +1,6 @@
 package app.grapheneos.searchbar.android
 
 import android.content.Context
-import android.util.TypedValue
 import android.util.TypedValue.*
 
 object Util {
