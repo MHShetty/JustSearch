@@ -99,12 +99,12 @@ class AssistActivity : Activity() {
             .setPositiveButton(R.string.select, null)
             .setNegativeButton(R.string.cancel, null)
             .create()
-        editText.setOnEditorActionListener({ text, actionId, _ ->
+        editText.setOnEditorActionListener { text, actionId, _ ->
             if (actionId == IME_ACTION_GO) {
                 onCustomProviderUrlSet(dialog, customProviderId, text.toString())
             }
             true
-        })
+        }
         dialog.show()
         dialog.getButton(BUTTON_POSITIVE).setOnClickListener {
             onCustomProviderUrlSet(dialog, customProviderId, editText.text.toString())
