@@ -32,6 +32,16 @@ import app.grapheneos.searchbar.android.adapter.ProviderListAdapter
 import app.grapheneos.searchbar.arch.model.CustomSearchProvider
 import app.grapheneos.searchbar.arch.model.generateProviders
 import kotlin.math.min
+import android.appwidget.AppWidgetManager
+
+import android.content.ComponentName
+import app.grapheneos.searchbar.android.provider.HomeScreenWidgetProvider
+
+import android.widget.RemoteViews
+
+
+
+
 
 class AssistActivity : Activity() {
     private val queryView by lazy { findViewById<EditText>(R.id.queryView) }
@@ -83,7 +93,22 @@ class AssistActivity : Activity() {
         } else {
             setSelectedProvider(id)
         }
+        updateWidgets()
         providerListWindow.dismiss()
+    }
+
+    private fun updateWidgets(){
+        val context: Context = this
+        val appWidgetManager = AppWidgetManager.getInstance(context)
+        val remoteViews = RemoteViews(context.packageName, R.layout.activity_assist_preview)
+        val thisWidget = ComponentName(context, HomeScreenWidgetProvider::class.java)
+        remoteViews.setImageViewResource(R.id.providerButton,
+            findSelectedProvider().iconRes())
+        remoteViews.setTextViewText(
+            R.id.searchHint,
+            "${findSelectedProvider().name()} Search")
+
+        appWidgetManager.updateAppWidget(thisWidget, remoteViews)
     }
 
     private fun showCustomUrlDialog(customProviderId: Long) {
