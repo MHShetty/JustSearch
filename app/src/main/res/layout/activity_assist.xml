@@ -19,15 +19,13 @@
         android:paddingEnd="8dp"
         android:paddingStart="8dp">
 
-        <com.google.android.material.imageview.ShapeableImageView
+        <ImageView
             android:id="@+id/providerButton"
+            style="?android:actionButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:layout_marginStart="6dp"
-            android:layout_marginEnd="6dp"
             android:importantForAccessibility="no"
-            app:shapeAppearanceOverlay="@style/ShapeAppearance.Image.PILL" />
+            android:src="@drawable/ic_provider_generic" />
 
         <EditText
             android:id="@+id/queryView"
