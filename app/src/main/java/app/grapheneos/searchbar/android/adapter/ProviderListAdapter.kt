@@ -1,13 +1,10 @@
 package app.grapheneos.searchbar.android.adapter
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.view.LayoutInflater.from
 import android.view.View
-import android.view.View.NO_ID
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import android.widget.ImageView
 import android.widget.TextView
 import app.grapheneos.searchbar.R
 import app.grapheneos.searchbar.arch.model.SearchProvider
