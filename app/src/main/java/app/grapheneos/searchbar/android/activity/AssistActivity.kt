@@ -7,9 +7,6 @@ import android.app.AlertDialog
 import android.app.AlertDialog.BUTTON_POSITIVE
 import android.app.AlertDialog.Builder
 import android.app.Dialog
-import android.content.ActivityNotFoundException
-import android.content.Context
-import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -33,14 +30,12 @@ import app.grapheneos.searchbar.arch.model.CustomSearchProvider
 import app.grapheneos.searchbar.arch.model.generateProviders
 import kotlin.math.min
 import android.appwidget.AppWidgetManager
+import android.content.*
 
-import android.content.ComponentName
 import app.grapheneos.searchbar.android.provider.HomeScreenWidgetProvider
 
 import android.widget.RemoteViews
-
-
-
+import androidx.preference.PreferenceManager
 
 
 class AssistActivity : Activity() {
@@ -49,8 +44,13 @@ class AssistActivity : Activity() {
     private val container by lazy { findViewById<View>(R.id.container) }
     private val providerListWindow by lazy { ListPopupWindow(this) }
     private val persistedValues by lazy {
-        SharedPreferencesPersistedValues(this, getPreferences(MODE_PRIVATE))
+        SharedPreferencesPersistedValues(this, preferences)
     }
+
+    private val preferences: SharedPreferences by lazy {
+        PreferenceManager.getDefaultSharedPreferences(this)
+    }
+
     private val providers by lazy { generateProviders(this, persistedValues) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
