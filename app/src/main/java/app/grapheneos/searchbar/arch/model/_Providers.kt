@@ -7,19 +7,19 @@ import app.grapheneos.searchbar.arch.model.persistence.PersistedValues
 interface SearchProvider {
     fun iconRes(): Int
     fun name(): String
-    fun url(): String
+    fun queryUrl(): String
     fun id(): Long
 }
 
 class StaticSearchProvider(
     private val iconRes: Int,
     private val name: String,
-    private val url: String,
+    private val queryUrl: String,
     private val id: Long
 ) : SearchProvider {
     override fun iconRes() = iconRes
     override fun name() = name
-    override fun url() = url
+    override fun queryUrl() = queryUrl
     override fun id() = id
 }
 
@@ -32,7 +32,7 @@ class CustomSearchProvider(
     override fun iconRes() = iconRes
     override fun name(): String = name
     override fun id() = id
-    override fun url(): String {
+    override fun queryUrl(): String {
         return persistedValues.getCustomProviderUrl()
     }
 }
